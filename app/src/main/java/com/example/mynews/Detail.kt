@@ -8,7 +8,7 @@ import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import androidx.core.view.isGone
 
-class detail : AppCompatActivity() {
+class Detail : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

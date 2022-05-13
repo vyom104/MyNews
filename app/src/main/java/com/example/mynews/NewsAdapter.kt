@@ -2,13 +2,11 @@ package com.example.mynews
 
 import android.content.Context
 import android.content.Intent
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
@@ -27,7 +25,7 @@ class NewsAdapter(val context: Context,val articles: List<Article>) : RecyclerVi
         Glide.with(context).load(article.urlToImage).into(holder.newsImage)
         holder.itemView.setOnClickListener {
            // Toast.makeText(context,article.author,Toast.LENGTH_SHORT).show()
-            val intent=Intent(context,detail::class.java)
+            val intent=Intent(context,Detail::class.java)
             intent.putExtra("URL",article.url)
             context.startActivity(intent)
         }
